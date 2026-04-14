@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import RewriteHistory, { RewriteRecord } from "@/components/RewriteHistory";
 import Header from "@/components/Header";
-import BackgroundCards from "@/components/BackgroundCards";
 
 export default function Home() {
   const [text, setText] = useState("");
