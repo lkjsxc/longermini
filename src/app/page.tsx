@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import RewriteHistory, { RewriteRecord } from "@/components/RewriteHistory";
 import Header from "@/components/Header";
 import { fetchStream } from "@/utils/stream";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
+import { SEED_LANGUAGES, SeedLanguage } from "@/constants/languages";
 
 export default function Home() {
   const [text, setText] = useState("");
@@ -11,11 +13,11 @@ export default function Home() {
   const [isLimitEnforced, setIsLimitEnforced] = useState(true);
   const [loading, setLoading] = useState(false);
   const [isThinking, setIsThinking] = useState(false);
-  const [remainingUses, setRemainingUses] = useState<number | null>(null);
+  const [remainingUses, setRemainingUses] = useLocalStorage<number | null>("remainingUses", null);
   const [history, setHistory] = useState<RewriteRecord[]>([]);
   const [examples, setExamples] = useState<string[]>(["Enter text here..."]);
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
-  const [seedLang, setSeedLang] = useState("English");
+  const [seedLang, setSeedLang] = useLocalStorage<SeedLanguage>("seedLang", "English");
   const [isGettingSeed, setIsGettingSeed] = useState(false);
 
   useEffect(() => {
@@ -118,19 +120,10 @@ export default function Home() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
             <div className="flex items-center gap-2">
-              <select value={seedLang} onChange={(e) => setSeedLang(e.target.value)} className="px-2 py-2 text-sm rounded-sm border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none">
-                <option value="English">English</option>
-                <option value="Japanese">Japanese</option>
-                <option value="Chinese">Chinese</option>
-                <option value="Korean">Korean</option>
-                <option value="Spanish">Spanish</option>
-                <option value="French">French</option>
-                <option value="German">German</option>
-                <option value="Italian">Italian</option>
-                <option value="Portuguese">Portuguese</option>
-                <option value="Russian">Russian</option>
-                <option value="Arabic">Arabic</option>
-                <option value="Hindi">Hindi</option>
+              <select value={seedLang} onChange={(e) => setSeedLang(e.target.value as SeedLanguage)} className="px-2 py-2 text-sm rounded-sm border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none">
+                {SEED_LANGUAGES.map(lang => (
+                  <option key={lang} value={lang}>{lang}</option>
+                ))}
               </select>
               <button type="button" onClick={handleGetSeed} disabled={isGettingSeed || loading} className="px-4 py-2 text-sm rounded-sm bg-blue-600 hover:bg-blue-700 text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                 {isGettingSeed ? "..." : "getseed"}

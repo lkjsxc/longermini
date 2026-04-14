@@ -1,39 +1,30 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 
 export default function Header() {
-  const [isDark, setIsDark] = useState(true);
+  const [theme, setTheme] = useLocalStorage<"dark" | "light" | null>("theme", null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Check initial preference
-    const isDarkMode = document.documentElement.classList.contains("dark") || 
-      (!document.documentElement.classList.contains("light") && window.matchMedia("(prefers-color-scheme: dark)").matches);
-    
-    const t = setTimeout(() => {
-      setIsDark(isDarkMode);
-      if (isDarkMode) {
-        document.documentElement.classList.add("dark");
-        document.documentElement.classList.remove("light");
-      } else {
-        document.documentElement.classList.add("light");
-        document.documentElement.classList.remove("dark");
-      }
-    }, 0);
-
-    return () => clearTimeout(t);
-  }, []);
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
+    setMounted(true);
+    const isDark = theme === "dark" || (theme === null && window.matchMedia("(prefers-color-scheme: dark)").matches);
     if (isDark) {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.classList.add("light");
-    } else {
       document.documentElement.classList.add("dark");
       document.documentElement.classList.remove("light");
+    } else {
+      document.documentElement.classList.add("light");
+      document.documentElement.classList.remove("dark");
     }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    const currentlyDark = document.documentElement.classList.contains("dark");
+    setTheme(currentlyDark ? "light" : "dark");
   };
+
+  const isDarkMode = mounted ? document.documentElement.classList.contains("dark") : true;
 
   return (
     <div className="w-full flex justify-between items-center mb-8">
@@ -46,7 +37,7 @@ export default function Header() {
           className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
           aria-label="Toggle Theme"
         >
-          {isDark ? "☀️" : "🌙"}
+          {isDarkMode ? "☀️" : "🌙"}
         </button>
         <a
           href="https://github.com/lkjsxc/longermini"
