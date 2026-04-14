@@ -1,6 +1,6 @@
 # Architecture
 
-This directory defines the non-UI contracts detailing how `longermini` operates, executes, and communicates with dependent services like the Gemini API.
+Table of Contents for Architecture documentation.
 
-## Child Index
-- [stack.md](stack.md): Runtime stack, technologies, and integration contracts.
+## Children
+- [stack.md](stack.md): Technology choices and runtime environment details.

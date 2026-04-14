@@ -1,18 +1,11 @@
-# Deployment & Testing
+# Deployment
 
-## Deployment
-- `longermini` utilizes a multi-stage `Dockerfile` optimized for Next.js production builds.
-- Local verification and deployment are orchestrated strictly via `docker-compose`.
-- To boot the application locally:
-  ```bash
-  docker-compose up --build
-  ```
-- The `GEMINI_API_KEY` environment variable must be set in the host environment or a local `.env` file for Docker interpolation.
+## Local Development
+- Use `docker compose up --build` for the definitive local environment.
+- This ensures consistency and prevents "it works on my machine" issues.
+- Exposes standard Next.js ports.
 
-## Testing
-- Tests are executed via:
-  ```bash
-  npm run test
-  ```
-- Testing leverages Jest and React Testing Library (RTL).
-- Dockerizing tests is optional; local bare-metal execution is preferred for developer iteration speed.
+## Production
+- Built and deployed onto Cloudflare Pages using OpenNext.
+- The build command is `npm run build` which invokes OpenNext builder.
+- Ensure correct environment variables (`GEMINI_API_KEY`) are set in Cloudflare's dashboard.

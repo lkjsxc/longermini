@@ -1,6 +1,6 @@
 # Operations
 
-This directory contains deployment, testing, and operational runbooks.
+Table of Contents for Operations documentation.
 
-## Child Index
-- [deployment.md](deployment.md): Docker setup, deployment commands, and testing instructions.
+## Children
+- [deployment.md](deployment.md): Instructions for building and running the project.

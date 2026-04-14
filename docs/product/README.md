@@ -1,6 +1,6 @@
 # Product
 
-This directory outlines the user-visible contracts: application behavior, UI features, theming rules, and interaction flows.
+Table of Contents for Product documentation.
 
-## Child Index
-- [features.md](features.md): Feature behavior, Light/Dark mode rules, input handling, and social integration.
+## Children
+- [features.md](features.md): Details of the UI features, interactions, and examples.
