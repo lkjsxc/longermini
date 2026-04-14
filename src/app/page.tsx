@@ -125,7 +125,7 @@ export default function Home() {
                 <option value="French">French</option>
                 <option value="German">German</option>
               </select>
-              <button type="button" onClick={handleGetSeed} disabled={isGettingSeed || loading} className="px-4 py-2 text-sm rounded-sm bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 disabled:opacity-50 transition-colors">
+              <button type="button" onClick={handleGetSeed} disabled={isGettingSeed || loading} className="px-4 py-2 text-sm rounded-sm bg-blue-600 hover:bg-blue-700 text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                 {isGettingSeed ? "..." : "getseed"}
               </button>
             </div>
