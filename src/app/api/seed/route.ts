@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { GoogleGenAI } from "@google/genai";
 import { cookies } from "next/headers";
-import { randomUUID } from "crypto";
-
-const usageCache = new Map<string, { count: number, resetAt: number }>();
+import { checkRateLimit, setRateLimitCookie } from "@/utils/rate-limit";
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,30 +10,14 @@ export async function POST(req: NextRequest) {
     const model = "gemini-3-flash-preview";
 
     const cookieStore = await cookies();
-    let clientId = cookieStore.get("client_id")?.value;
-    let isNewClient = false;
-    
-    if (!clientId) {
-      clientId = randomUUID();
-      isNewClient = true;
-    }
+    const { limitReached, remaining, usage } = checkRateLimit(cookieStore);
 
-    const now = Date.now();
-    let usage = usageCache.get(clientId);
-    if (!usage || now > usage.resetAt) {
-      usage = { count: 0, resetAt: now + 24 * 60 * 60 * 1000 };
-      usageCache.set(clientId, usage);
-    }
-
-    if (usage.count >= 10) {
+    if (limitReached) {
       return NextResponse.json(
         { error: "Daily limit of 10 requests reached." },
         { status: 429 }
       );
     }
-
-    usage.count += 1;
-    const remaining = 10 - usage.count;
 
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
@@ -81,9 +63,7 @@ export async function POST(req: NextRequest) {
       }
     });
 
-    if (isNewClient) {
-      response.cookies.set("client_id", clientId, { maxAge: 60 * 60 * 24 * 365, httpOnly: true });
-    }
+    setRateLimitCookie(response, usage);
 
     return response;
   } catch (error) {
