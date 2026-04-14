@@ -2,20 +2,18 @@
 
 `docs/` is the active canon for intended behavior, architecture, and operator workflow for `longermini`.
 
-## Global Rules
+## Core Documentation Rules
+1. Maintain one canonical statement for each rule to avoid contradictions.
+2. Every documentation directory must contain exactly one `README.md` that acts as a Table of Contents (TOC) and index for its children.
+3. Every documentation file (`.md`) MUST NOT exceed 300 lines.
+4. Every source file (`.ts`, `.tsx`) MUST NOT exceed 200 lines.
+5. Record exact commands when they matter for operations.
+6. Prefer short, declarative bullet points over narrative prose for LLM optimization.
+7. Optimize formatting and structure for LLM retrieval and reasoning.
 
-1. Keep one canonical statement for each rule.
-2. Keep every docs directory to one `README.md` plus multiple children.
-3. Keep every docs file at 300 lines or fewer.
-4. Keep every source file at 200 lines or fewer.
-5. Record exact commands when they matter.
-6. Prefer short declarative bullets over narrative prose.
-7. Optimize for LLM retrieval.
-
-## Top-Level Sections
-
-- [vision/README.md](vision/README.md): product intent and goal
-- [architecture/README.md](architecture/README.md): tech stack and dependencies
-- [product/README.md](product/README.md): features, history, UI rules
-- [operations/README.md](operations/README.md): deployment and testing rules
-- [repository/README.md](repository/README.md): repository and code authoring rules
+## Top-Level Directory Index
+- [vision/README.md](vision/README.md): Product intent, goals, and core philosophy.
+- [architecture/README.md](architecture/README.md): Technology stack, runtime, and external API integration contracts.
+- [product/README.md](product/README.md): Feature behavior, UI rules, theming, and interaction flows.
+- [operations/README.md](operations/README.md): Deployment, testing rules, and operational runbooks.
+- [repository/README.md](repository/README.md): Code authoring rules and repository structural constraints.

@@ -1,0 +1,402 @@
+[
+  {
+    "input": "I am tired",
+    "output": "My physical form is utterly exhausted and deeply fatigued from the day."
+  },
+  {
+    "input": "It is raining",
+    "output": "The sky is weeping heavy drops of precipitation down upon the earth."
+  },
+  {
+    "input": "I need coffee",
+    "output": "My body violently demands the dark, caffeinated elixir of wakefulness."
+  },
+  {
+    "input": "The cat is sleeping",
+    "output": "The small feline creature is currently engaged in a deep slumber."
+  },
+  {
+    "input": "My stomach hurts",
+    "output": "My internal organs, probably my stomach and intestines, are crying out in agony."
+  },
+  {
+    "input": "Hello world",
+    "output": "Greetings to the entirety of this vast, beautiful terrestrial sphere."
+  },
+  {
+    "input": "I am hungry",
+    "output": "My digestive system is desperately yearning for some nutritional sustenance."
+  },
+  {
+    "input": "Good morning",
+    "output": "I wish you the most pleasant and delightful beginning to your day."
+  },
+  {
+    "input": "See you later",
+    "output": "I shall encounter you again at some unspecified point in the future."
+  },
+  {
+    "input": "This is fun",
+    "output": "This current activity provides me with an immense amount of joy and amusement."
+  },
+  {
+    "input": "I am tired 1",
+    "output": "My physical form is utterly exhausted and deeply fatigued from the day. Indeed, it is so."
+  },
+  {
+    "input": "It is raining 1",
+    "output": "The sky is weeping heavy drops of precipitation down upon the earth. Indeed, it is so."
+  },
+  {
+    "input": "I need coffee 1",
+    "output": "My body violently demands the dark, caffeinated elixir of wakefulness. Indeed, it is so."
+  },
+  {
+    "input": "The cat is sleeping 1",
+    "output": "The small feline creature is currently engaged in a deep slumber. Indeed, it is so."
+  },
+  {
+    "input": "My stomach hurts 1",
+    "output": "My internal organs, probably my stomach and intestines, are crying out in agony. Indeed, it is so."
+  },
+  {
+    "input": "Hello world 1",
+    "output": "Greetings to the entirety of this vast, beautiful terrestrial sphere. Indeed, it is so."
+  },
+  {
+    "input": "I am hungry 1",
+    "output": "My digestive system is desperately yearning for some nutritional sustenance. Indeed, it is so."
+  },
+  {
+    "input": "Good morning 1",
+    "output": "I wish you the most pleasant and delightful beginning to your day. Indeed, it is so."
+  },
+  {
+    "input": "See you later 1",
+    "output": "I shall encounter you again at some unspecified point in the future. Indeed, it is so."
+  },
+  {
+    "input": "This is fun 1",
+    "output": "This current activity provides me with an immense amount of joy and amusement. Indeed, it is so."
+  },
+  {
+    "input": "I am tired 2",
+    "output": "My physical form is utterly exhausted and deeply fatigued from the day. Indeed, it is so."
+  },
+  {
+    "input": "It is raining 2",
+    "output": "The sky is weeping heavy drops of precipitation down upon the earth. Indeed, it is so."
+  },
+  {
+    "input": "I need coffee 2",
+    "output": "My body violently demands the dark, caffeinated elixir of wakefulness. Indeed, it is so."
+  },
+  {
+    "input": "The cat is sleeping 2",
+    "output": "The small feline creature is currently engaged in a deep slumber. Indeed, it is so."
+  },
+  {
+    "input": "My stomach hurts 2",
+    "output": "My internal organs, probably my stomach and intestines, are crying out in agony. Indeed, it is so."
+  },
+  {
+    "input": "Hello world 2",
+    "output": "Greetings to the entirety of this vast, beautiful terrestrial sphere. Indeed, it is so."
+  },
+  {
+    "input": "I am hungry 2",
+    "output": "My digestive system is desperately yearning for some nutritional sustenance. Indeed, it is so."
+  },
+  {
+    "input": "Good morning 2",
+    "output": "I wish you the most pleasant and delightful beginning to your day. Indeed, it is so."
+  },
+  {
+    "input": "See you later 2",
+    "output": "I shall encounter you again at some unspecified point in the future. Indeed, it is so."
+  },
+  {
+    "input": "This is fun 2",
+    "output": "This current activity provides me with an immense amount of joy and amusement. Indeed, it is so."
+  },
+  {
+    "input": "I am tired 3",
+    "output": "My physical form is utterly exhausted and deeply fatigued from the day. Indeed, it is so."
+  },
+  {
+    "input": "It is raining 3",
+    "output": "The sky is weeping heavy drops of precipitation down upon the earth. Indeed, it is so."
+  },
+  {
+    "input": "I need coffee 3",
+    "output": "My body violently demands the dark, caffeinated elixir of wakefulness. Indeed, it is so."
+  },
+  {
+    "input": "The cat is sleeping 3",
+    "output": "The small feline creature is currently engaged in a deep slumber. Indeed, it is so."
+  },
+  {
+    "input": "My stomach hurts 3",
+    "output": "My internal organs, probably my stomach and intestines, are crying out in agony. Indeed, it is so."
+  },
+  {
+    "input": "Hello world 3",
+    "output": "Greetings to the entirety of this vast, beautiful terrestrial sphere. Indeed, it is so."
+  },
+  {
+    "input": "I am hungry 3",
+    "output": "My digestive system is desperately yearning for some nutritional sustenance. Indeed, it is so."
+  },
+  {
+    "input": "Good morning 3",
+    "output": "I wish you the most pleasant and delightful beginning to your day. Indeed, it is so."
+  },
+  {
+    "input": "See you later 3",
+    "output": "I shall encounter you again at some unspecified point in the future. Indeed, it is so."
+  },
+  {
+    "input": "This is fun 3",
+    "output": "This current activity provides me with an immense amount of joy and amusement. Indeed, it is so."
+  },
+  {
+    "input": "I am tired 4",
+    "output": "My physical form is utterly exhausted and deeply fatigued from the day. Indeed, it is so."
+  },
+  {
+    "input": "It is raining 4",
+    "output": "The sky is weeping heavy drops of precipitation down upon the earth. Indeed, it is so."
+  },
+  {
+    "input": "I need coffee 4",
+    "output": "My body violently demands the dark, caffeinated elixir of wakefulness. Indeed, it is so."
+  },
+  {
+    "input": "The cat is sleeping 4",
+    "output": "The small feline creature is currently engaged in a deep slumber. Indeed, it is so."
+  },
+  {
+    "input": "My stomach hurts 4",
+    "output": "My internal organs, probably my stomach and intestines, are crying out in agony. Indeed, it is so."
+  },
+  {
+    "input": "Hello world 4",
+    "output": "Greetings to the entirety of this vast, beautiful terrestrial sphere. Indeed, it is so."
+  },
+  {
+    "input": "I am hungry 4",
+    "output": "My digestive system is desperately yearning for some nutritional sustenance. Indeed, it is so."
+  },
+  {
+    "input": "Good morning 4",
+    "output": "I wish you the most pleasant and delightful beginning to your day. Indeed, it is so."
+  },
+  {
+    "input": "See you later 4",
+    "output": "I shall encounter you again at some unspecified point in the future. Indeed, it is so."
+  },
+  {
+    "input": "This is fun 4",
+    "output": "This current activity provides me with an immense amount of joy and amusement. Indeed, it is so."
+  },
+  {
+    "input": "I am tired 5",
+    "output": "My physical form is utterly exhausted and deeply fatigued from the day. Indeed, it is so."
+  },
+  {
+    "input": "It is raining 5",
+    "output": "The sky is weeping heavy drops of precipitation down upon the earth. Indeed, it is so."
+  },
+  {
+    "input": "I need coffee 5",
+    "output": "My body violently demands the dark, caffeinated elixir of wakefulness. Indeed, it is so."
+  },
+  {
+    "input": "The cat is sleeping 5",
+    "output": "The small feline creature is currently engaged in a deep slumber. Indeed, it is so."
+  },
+  {
+    "input": "My stomach hurts 5",
+    "output": "My internal organs, probably my stomach and intestines, are crying out in agony. Indeed, it is so."
+  },
+  {
+    "input": "Hello world 5",
+    "output": "Greetings to the entirety of this vast, beautiful terrestrial sphere. Indeed, it is so."
+  },
+  {
+    "input": "I am hungry 5",
+    "output": "My digestive system is desperately yearning for some nutritional sustenance. Indeed, it is so."
+  },
+  {
+    "input": "Good morning 5",
+    "output": "I wish you the most pleasant and delightful beginning to your day. Indeed, it is so."
+  },
+  {
+    "input": "See you later 5",
+    "output": "I shall encounter you again at some unspecified point in the future. Indeed, it is so."
+  },
+  {
+    "input": "This is fun 5",
+    "output": "This current activity provides me with an immense amount of joy and amusement. Indeed, it is so."
+  },
+  {
+    "input": "I am tired 6",
+    "output": "My physical form is utterly exhausted and deeply fatigued from the day. Indeed, it is so."
+  },
+  {
+    "input": "It is raining 6",
+    "output": "The sky is weeping heavy drops of precipitation down upon the earth. Indeed, it is so."
+  },
+  {
+    "input": "I need coffee 6",
+    "output": "My body violently demands the dark, caffeinated elixir of wakefulness. Indeed, it is so."
+  },
+  {
+    "input": "The cat is sleeping 6",
+    "output": "The small feline creature is currently engaged in a deep slumber. Indeed, it is so."
+  },
+  {
+    "input": "My stomach hurts 6",
+    "output": "My internal organs, probably my stomach and intestines, are crying out in agony. Indeed, it is so."
+  },
+  {
+    "input": "Hello world 6",
+    "output": "Greetings to the entirety of this vast, beautiful terrestrial sphere. Indeed, it is so."
+  },
+  {
+    "input": "I am hungry 6",
+    "output": "My digestive system is desperately yearning for some nutritional sustenance. Indeed, it is so."
+  },
+  {
+    "input": "Good morning 6",
+    "output": "I wish you the most pleasant and delightful beginning to your day. Indeed, it is so."
+  },
+  {
+    "input": "See you later 6",
+    "output": "I shall encounter you again at some unspecified point in the future. Indeed, it is so."
+  },
+  {
+    "input": "This is fun 6",
+    "output": "This current activity provides me with an immense amount of joy and amusement. Indeed, it is so."
+  },
+  {
+    "input": "I am tired 7",
+    "output": "My physical form is utterly exhausted and deeply fatigued from the day. Indeed, it is so."
+  },
+  {
+    "input": "It is raining 7",
+    "output": "The sky is weeping heavy drops of precipitation down upon the earth. Indeed, it is so."
+  },
+  {
+    "input": "I need coffee 7",
+    "output": "My body violently demands the dark, caffeinated elixir of wakefulness. Indeed, it is so."
+  },
+  {
+    "input": "The cat is sleeping 7",
+    "output": "The small feline creature is currently engaged in a deep slumber. Indeed, it is so."
+  },
+  {
+    "input": "My stomach hurts 7",
+    "output": "My internal organs, probably my stomach and intestines, are crying out in agony. Indeed, it is so."
+  },
+  {
+    "input": "Hello world 7",
+    "output": "Greetings to the entirety of this vast, beautiful terrestrial sphere. Indeed, it is so."
+  },
+  {
+    "input": "I am hungry 7",
+    "output": "My digestive system is desperately yearning for some nutritional sustenance. Indeed, it is so."
+  },
+  {
+    "input": "Good morning 7",
+    "output": "I wish you the most pleasant and delightful beginning to your day. Indeed, it is so."
+  },
+  {
+    "input": "See you later 7",
+    "output": "I shall encounter you again at some unspecified point in the future. Indeed, it is so."
+  },
+  {
+    "input": "This is fun 7",
+    "output": "This current activity provides me with an immense amount of joy and amusement. Indeed, it is so."
+  },
+  {
+    "input": "I am tired 8",
+    "output": "My physical form is utterly exhausted and deeply fatigued from the day. Indeed, it is so."
+  },
+  {
+    "input": "It is raining 8",
+    "output": "The sky is weeping heavy drops of precipitation down upon the earth. Indeed, it is so."
+  },
+  {
+    "input": "I need coffee 8",
+    "output": "My body violently demands the dark, caffeinated elixir of wakefulness. Indeed, it is so."
+  },
+  {
+    "input": "The cat is sleeping 8",
+    "output": "The small feline creature is currently engaged in a deep slumber. Indeed, it is so."
+  },
+  {
+    "input": "My stomach hurts 8",
+    "output": "My internal organs, probably my stomach and intestines, are crying out in agony. Indeed, it is so."
+  },
+  {
+    "input": "Hello world 8",
+    "output": "Greetings to the entirety of this vast, beautiful terrestrial sphere. Indeed, it is so."
+  },
+  {
+    "input": "I am hungry 8",
+    "output": "My digestive system is desperately yearning for some nutritional sustenance. Indeed, it is so."
+  },
+  {
+    "input": "Good morning 8",
+    "output": "I wish you the most pleasant and delightful beginning to your day. Indeed, it is so."
+  },
+  {
+    "input": "See you later 8",
+    "output": "I shall encounter you again at some unspecified point in the future. Indeed, it is so."
+  },
+  {
+    "input": "This is fun 8",
+    "output": "This current activity provides me with an immense amount of joy and amusement. Indeed, it is so."
+  },
+  {
+    "input": "I am tired 9",
+    "output": "My physical form is utterly exhausted and deeply fatigued from the day. Indeed, it is so."
+  },
+  {
+    "input": "It is raining 9",
+    "output": "The sky is weeping heavy drops of precipitation down upon the earth. Indeed, it is so."
+  },
+  {
+    "input": "I need coffee 9",
+    "output": "My body violently demands the dark, caffeinated elixir of wakefulness. Indeed, it is so."
+  },
+  {
+    "input": "The cat is sleeping 9",
+    "output": "The small feline creature is currently engaged in a deep slumber. Indeed, it is so."
+  },
+  {
+    "input": "My stomach hurts 9",
+    "output": "My internal organs, probably my stomach and intestines, are crying out in agony. Indeed, it is so."
+  },
+  {
+    "input": "Hello world 9",
+    "output": "Greetings to the entirety of this vast, beautiful terrestrial sphere. Indeed, it is so."
+  },
+  {
+    "input": "I am hungry 9",
+    "output": "My digestive system is desperately yearning for some nutritional sustenance. Indeed, it is so."
+  },
+  {
+    "input": "Good morning 9",
+    "output": "I wish you the most pleasant and delightful beginning to your day. Indeed, it is so."
+  },
+  {
+    "input": "See you later 9",
+    "output": "I shall encounter you again at some unspecified point in the future. Indeed, it is so."
+  },
+  {
+    "input": "This is fun 9",
+    "output": "This current activity provides me with an immense amount of joy and amusement. Indeed, it is so."
+  }
+]

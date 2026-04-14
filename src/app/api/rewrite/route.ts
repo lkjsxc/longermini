@@ -58,6 +58,7 @@ export async function POST(req: NextRequest) {
     The generated text should be approximately 1.5 times longer than the original text.
     Explicitly avoid adding new information or altering the core meaning. Only expand the existing concepts (e.g., "My stomach hurts" becomes "My internal organs, probably my stomach and intestines, are crying out").
     You MUST output your thoughts first inside <think>...</think> tags, then output ONLY the final rewritten text outside the tags.
+    CRITICAL: Keep your thinking phase extremely brief (simulate under 5 seconds of thought).
 
     Original Text: ${text}
 

@@ -1,7 +1,6 @@
 # Product
 
-Use this subtree for the user-visible contracts: behavior, UI features, and interaction rules.
+This directory outlines the user-visible contracts: application behavior, UI features, theming rules, and interaction flows.
 
 ## Child Index
-
-- [features.md](features.md): feature behavior, dark mode, and rewrite history rules
+- [features.md](features.md): Feature behavior, Light/Dark mode rules, input handling, and social integration.

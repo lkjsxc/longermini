@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import RewriteHistory, { RewriteRecord } from "@/components/RewriteHistory";
+import Header from "@/components/Header";
+import BackgroundCards from "@/components/BackgroundCards";
 
 export default function Home() {
   const [text, setText] = useState("");
@@ -25,14 +27,16 @@ export default function Home() {
     if (saved) {
       try {
         setHistory(JSON.parse(saved));
-      } catch (e) {}
+      } catch {
+        // ignore
+      }
     }
   }, []);
 
   useEffect(() => {
     if (!text && examples.length > 1) {
       const interval = setInterval(() => {
-        setPlaceholderIndex((prev) => (prev + 1) % examples.length);
+        setPlaceholderIndex(Math.floor(Math.random() * examples.length));
       }, 3000);
       return () => clearInterval(interval);
     }
@@ -47,7 +51,7 @@ export default function Home() {
     const val = e.target.value;
     if (isOriginal && val.length > 140) return;
     setText(val);
-    setIsOriginal(true); // Any user edit makes it original
+    setIsOriginal(true);
   };
 
   const handleRewrite = async (e: React.FormEvent) => {
@@ -105,56 +109,76 @@ export default function Home() {
         };
         saveHistory([newRecord, ...history]);
       }
-    } catch (error: any) {
-      alert(error.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        alert(error.message);
+      } else {
+        alert(String(error));
+      }
       setIsThinking(false);
     } finally {
       setLoading(false);
     }
   };
 
+  const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+
   return (
-    <main className="min-h-screen p-8 sm:p-12 text-gray-100 bg-[#0a0a0a]">
-      <div className="max-w-2xl mx-auto flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-extrabold tracking-tight">longermini</h1>
-      </div>
+    <main className="min-h-screen p-8 sm:p-12 relative z-10">
+      <BackgroundCards />
+      
+      <div className="max-w-2xl mx-auto relative z-20">
+        <Header />
 
-      <form onSubmit={handleRewrite} className="max-w-2xl mx-auto flex flex-col gap-4">
-        <div className="relative">
-          <textarea
-            value={text}
-            onChange={handleTextChange}
-            placeholder={examples[placeholderIndex]}
-            className="w-full h-40 p-4 rounded-sm border border-gray-700 bg-gray-900 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none transition-colors"
-          />
-          {isOriginal && (
-            <div className={`absolute bottom-3 right-3 text-xs ${text.length >= 140 ? 'text-red-500' : 'text-gray-400'}`}>
-              {text.length} / 140
-            </div>
-          )}
-        </div>
-        
-        <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-          <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
-            {isThinking && <span className="text-sm font-semibold text-blue-600 animate-pulse">Thinking...</span>}
-            <button
-              type="submit"
-              disabled={loading || !text.trim()}
-              className="px-6 py-2 rounded-sm bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold transition-colors"
-            >
-              {loading ? "Processing..." : "longermini"}
-            </button>
+        <form onSubmit={handleRewrite} className="flex flex-col gap-4">
+          <div className="relative">
+            <textarea
+              value={text}
+              onChange={handleTextChange}
+              placeholder={examples[placeholderIndex]}
+              className="w-full h-40 p-4 rounded-sm border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none transition-colors"
+            />
+            {isOriginal && (
+              <div className={`absolute bottom-3 right-3 text-xs ${text.length >= 140 ? 'text-red-500' : 'text-gray-500 dark:text-gray-400'}`}>
+                {text.length} / 140
+              </div>
+            )}
           </div>
-        </div>
-        
-        {remainingUses !== null && (
-          <p className="text-xs text-right text-gray-500">
-            {remainingUses} generation{remainingUses !== 1 ? 's' : ''} remaining today
-          </p>
-        )}
-      </form>
+          
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
+            <div className="flex items-center gap-3 w-full sm:w-auto justify-end ml-auto">
+              {isThinking && <span className="text-sm font-semibold text-blue-600 animate-pulse">Thinking...</span>}
+              
+              {!isOriginal && !loading && (
+                <a
+                  href={tweetUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-sm bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 font-semibold transition-colors flex items-center justify-center text-sm"
+                >
+                  Post to X
+                </a>
+              )}
 
-      <RewriteHistory history={history} onClear={() => saveHistory([])} />
+              <button
+                type="submit"
+                disabled={loading || !text.trim()}
+                className="px-6 py-2 rounded-sm bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold transition-colors"
+              >
+                {loading ? "Processing..." : "longermini!"}
+              </button>
+            </div>
+          </div>
+          
+          {remainingUses !== null && (
+            <p className="text-xs text-right text-gray-500">
+              {remainingUses} generation{remainingUses !== 1 ? 's' : ''} remaining today
+            </p>
+          )}
+        </form>
+
+        <RewriteHistory history={history} onClear={() => saveHistory([])} />
+      </div>
     </main>
   );
 }

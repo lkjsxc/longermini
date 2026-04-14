@@ -1,7 +1,6 @@
 # Repository
 
-Use this subtree for authoring, codebase, and structural rules.
+This directory establishes the code authoring, codebase maintenance, and structural rules for the project.
 
 ## Child Index
-
-- [rules.md](rules.md): coding standards and structure constraints
+- [rules.md](rules.md): Coding standards, component structures, and strict constraints.

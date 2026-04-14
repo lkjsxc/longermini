@@ -1,7 +1,6 @@
 # Vision
 
-Use this subtree for the intent that explains why `longermini` exists.
+This directory explains the intent and philosophical rationale for why `longermini` exists.
 
 ## Child Index
-
-- [purpose.md](purpose.md): product goal, intent, and non-goals
+- [purpose.md](purpose.md): Product goals, explicit intent, and explicit non-goals.

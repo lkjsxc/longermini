@@ -1,22 +1,21 @@
 # Purpose Contract
 
 ## Goal
-
-`longermini` is a simple web application with a single text input box. When activated, it uses the Gemini API to rewrite the input into a progressively longer, more verbose piece of text with a similar meaning. It explicitly avoids adding new information or altering the core meaning (e.g., "My stomach hurts" becomes "My internal organs, probably my stomach and intestines, are crying out").
+`longermini` is a web application with a single primary text input box. It utilizes the Gemini API to progressively rewrite input into longer, more verbose, and dramatically embellished text that retains identical meaning. It explicitly refuses to add new semantic facts or alter core intent (e.g., "My stomach hurts" strictly becomes "My internal organs, probably my stomach and intestines, are crying out in agony").
 
 ## Product Intent
-
-- Serve a lightweight, fast, exclusively dark-mode UI.
-- Allow users to input short text (max 140 characters).
-- Generate longer variants using AI (`gemini-3-flash-preview` by default).
-- Support explicit thinking phases for the LLM output.
-- Overwrite the input field directly with the generated text, enabling repeated expansion.
-- Store generation history locally in the browser.
-- Limit usage to 10 generations per day per client.
+- Deliver a lightweight, fast UI supporting both explicit Dark (default) and Light modes.
+- Allow short input (max 140 characters).
+- Expand text using `gemini-3-flash-preview`.
+- Support a highly constrained, fast explicit "thinking" phase (< 5 seconds).
+- Overwrite the input directly, encouraging continuous repeated expansion.
+- Provide a rich ambient background of historical I/O examples floating and fading to demonstrate app capabilities visually.
+- Enable immediate social sharing of outputs to X (Twitter).
+- Store usage history locally without enforcing logins.
+- Cap usage at 10 generations per client, per day.
 
 ## Non-Goals
-
-- No persistent backend database storage for user history.
-- No multi-user authentication.
-- No complex or multi-page workflows.
-- No style selection options; strict adherence to the default expansion behavior.
+- No persistent backend database storage for user generations.
+- No user authentication or multi-user accounts.
+- No complex multi-page workflows or configuration screens.
+- No altering the original semantic meaning of the text.

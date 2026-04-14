@@ -1,7 +1,6 @@
 # Architecture
 
-Use this subtree for the non-UI contracts that define how `longermini` runs and talks to dependent services.
+This directory defines the non-UI contracts detailing how `longermini` operates, executes, and communicates with dependent services like the Gemini API.
 
 ## Child Index
-
-- [stack.md](stack.md): runtime stack, technologies, and integration contracts
+- [stack.md](stack.md): Runtime stack, technologies, and integration contracts.

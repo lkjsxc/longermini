@@ -1,11 +1,13 @@
 # Repository Rules
 
-## Constraints
-- Every markdown documentation file must strictly not exceed 300 lines.
-- Every source code file (`.ts`, `.tsx`) must strictly not exceed 200 lines.
-- Documentation directories must always contain a `README.md` file at their root acting as an index.
+## Structural Constraints
+- **Documentation Limits:** Every markdown (`.md`) file MUST NOT exceed 300 lines.
+- **Code Limits:** Every source code file (`.ts`, `.tsx`) MUST NOT exceed 200 lines. Extract modular components (e.g., `Header`, `BackgroundCards`) to satisfy this.
+- **Documentation Trees:** Documentation directories must always contain a `README.md` at their root acting as an index.
 
-## Quality
-- All UI components should be highly modular.
-- Use `npm run lint` before committing to ensure Next.js standard compliance.
-- Code should favor modern Next.js App Router conventions (Server Components where possible, Client Components for interactivity).
+## Quality Standards
+- Code must prioritize modern Next.js App Router conventions.
+- All UI elements must be heavily modularized.
+- Run `npm run lint` before committing to verify standard compliance.
+- No unused variables or unnecessary imports.
+- Maintain a single canonical statement per rule within `docs/` to avoid drift or contradictions.

@@ -1,12 +1,18 @@
 # Deployment & Testing
 
 ## Deployment
-- `longermini` uses a multi-stage `Dockerfile` optimized for Next.js production builds.
-- Local deployment and verification is orchestrated via `docker-compose`.
-- To boot locally: `docker-compose up --build`
-- Ensure `GEMINI_API_KEY` is set in the host environment or a `.env` file for Docker to pick up.
+- `longermini` utilizes a multi-stage `Dockerfile` optimized for Next.js production builds.
+- Local verification and deployment are orchestrated strictly via `docker-compose`.
+- To boot the application locally:
+  ```bash
+  docker-compose up --build
+  ```
+- The `GEMINI_API_KEY` environment variable must be set in the host environment or a local `.env` file for Docker interpolation.
 
 ## Testing
-- All tests are run via `npm run test`.
-- Uses Jest + React Testing Library.
-- Dockerizing tests is optional; local execution is preferred for speed.
+- Tests are executed via:
+  ```bash
+  npm run test
+  ```
+- Testing leverages Jest and React Testing Library (RTL).
+- Dockerizing tests is optional; local bare-metal execution is preferred for developer iteration speed.
