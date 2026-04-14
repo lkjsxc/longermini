@@ -121,9 +121,16 @@ export default function Home() {
               <select value={seedLang} onChange={(e) => setSeedLang(e.target.value)} className="px-2 py-2 text-sm rounded-sm border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none">
                 <option value="English">English</option>
                 <option value="Japanese">Japanese</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Korean">Korean</option>
                 <option value="Spanish">Spanish</option>
                 <option value="French">French</option>
                 <option value="German">German</option>
+                <option value="Italian">Italian</option>
+                <option value="Portuguese">Portuguese</option>
+                <option value="Russian">Russian</option>
+                <option value="Arabic">Arabic</option>
+                <option value="Hindi">Hindi</option>
               </select>
               <button type="button" onClick={handleGetSeed} disabled={isGettingSeed || loading} className="px-4 py-2 text-sm rounded-sm bg-blue-600 hover:bg-blue-700 text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                 {isGettingSeed ? "..." : "getseed"}

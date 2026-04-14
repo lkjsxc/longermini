@@ -18,5 +18,5 @@
 - The placeholder list is loaded from `public/examples.json`.
 
 ## getseed Feature
-- Allows users to select a language (English, Japanese, Spanish, French, German).
+- Allows users to select a language (English, Japanese, Chinese, Korean, Spanish, French, German, Italian, Portuguese, Russian, Arabic, Hindi).
 - Requests a short, casual sentence from the Gemini API to serve as a seed for the longermini expansion.
