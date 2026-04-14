@@ -125,7 +125,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen p-8 sm:p-12 relative z-10">
-      <BackgroundCards />
       
       <div className="max-w-2xl mx-auto relative z-20">
         <Header />
