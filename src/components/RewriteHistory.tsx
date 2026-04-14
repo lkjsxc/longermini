@@ -25,8 +25,8 @@ export default function RewriteHistory({ history, onClear }: Props) {
       </div>
       <div className="space-y-6">
         {history.map((record) => (
-          <div key={record.id} className="p-4 border rounded-sm bg-gray-900 border-gray-800 text-gray-100">
-            <div className="text-xs text-gray-400 mb-2">
+          <div key={record.id} className="p-4 border rounded-sm bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-800 text-gray-900 dark:text-gray-100 shadow-sm">
+            <div className="text-xs text-gray-500 dark:text-gray-400 mb-2">
               {new Date(record.timestamp).toLocaleString()}
             </div>
             <div className="mb-2">
