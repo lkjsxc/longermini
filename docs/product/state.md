@@ -25,5 +25,5 @@ The application utilizes the browser's `localStorage` for persisting user prefer
     *   A UUID assigned to new clients and stored in an HTTP-only cookie.
 2.  **Usage Token (`usage_token`)**:
     *   A JSON string containing `{ count: number, resetAt: number }`.
-    *   Used by Edge API routes to enforce the daily rate limit of 10 requests.
+    *   Used by Edge API routes to enforce the daily rate limit of 20 requests.
     *   Necessary because in-memory state (like `Map`) resets on Edge cold starts.

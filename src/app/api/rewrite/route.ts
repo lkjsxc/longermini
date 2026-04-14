@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
 
     if (limitReached) {
       return NextResponse.json(
-        { error: "Daily limit of 10 requests reached." },
+        { error: "Daily limit of 20 requests reached." },
         { status: 429 }
       );
     }

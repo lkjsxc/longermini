@@ -20,12 +20,12 @@ export function checkRateLimit(cookieStore: any): { limitReached: boolean; remai
     }
   }
 
-  if (usage.count >= 10) {
+  if (usage.count >= 20) {
     return { limitReached: true, remaining: 0, usage };
   }
 
   usage.count += 1;
-  const remaining = 10 - usage.count;
+  const remaining = 20 - usage.count;
 
   return { limitReached: false, remaining, usage };
 }
