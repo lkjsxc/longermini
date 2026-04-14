@@ -29,7 +29,10 @@ export async function POST(req: NextRequest) {
 
     const ai = new GoogleGenAI({ apiKey });
     
-    const prompt = `Generate a very short, random, casual sentence in ${language}. It should be high-quality but funny, mundane, or relatable (e.g., "I'm hungry", "My back hurts", "The moon is beautiful", "I want to eat karaage").
+    const prompt = `Generate a very short, highly random, and completely unexpected sentence in ${language}. 
+    Cover a radically broad range of content to ensure it never feels repetitive. 
+    It can be absurd, surreal, deeply philosophical, a mundane observation, sci-fi, a bizarre non-sequitur, funny, or mysteriously poetic (e.g., "The toaster is judging my life choices", "I forgot how to breathe in manual mode", "Quantum physics is just spicy math", "A pigeon just winked at me suspiciously").
+    Vary the tone wildly each time.
     Do not include translations, explanations, or quotes. Just output the sentence.
     You MUST output your thoughts first inside <think>...</think> tags, then output ONLY the final text outside the tags.
     CRITICAL: Keep your thinking phase extremely brief (simulate under 5 seconds of thought).`;
