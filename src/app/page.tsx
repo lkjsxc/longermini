@@ -23,7 +23,7 @@ export default function Home() {
   useEffect(() => {
     fetch("/examples.json")
       .then((res) => res.json())
-      .then((data) => { if (data && data.length) setExamples(data); })
+      .then((data) => { if (data && data.length) setExamples([...data].sort(() => Math.random() - 0.5)); })
       .catch(() => console.error("Failed to load examples"));
 
     const saved = localStorage.getItem("rewriteHistory");
@@ -34,7 +34,7 @@ export default function Home() {
 
   useEffect(() => {
     if (!text && examples.length > 1) {
-      const interval = setInterval(() => setPlaceholderIndex(Math.floor(Math.random() * examples.length)), 3000);
+      const interval = setInterval(() => setPlaceholderIndex((prev) => (prev + 1) % examples.length), 3000);
       return () => clearInterval(interval);
     }
   }, [text, examples.length]);
