@@ -1,15 +1,12 @@
-# Rules
+# Repository Rules
 
-## Constraints
-- **Markdown Limits**: Documentation files must never exceed 300 lines.
-- **Source Limits**: `.ts` and `.tsx` source files must never exceed 200 lines. Split components explicitly when approaching this limit.
-- **TOC Requirement**: All `docs/` subdirectories must have a `README.md` that acts purely as a table of contents.
+## File Length Constraints
+- **Markdown Documentation**: Must never exceed 300 lines.
+- **Source Code (`.ts`, `.tsx`)**: Must never exceed 200 lines. Components must be split if approaching this limit.
+- **TOC Requirement**: Every directory inside `docs/` must have a `README.md` that serves purely as a table of contents for its children.
 
-## Commits
-- Commit frequently during the development process.
-- Ensure functional and logical chunks are grouped into commits.
-- "YOLO" mode is permitted for high-speed delivery.
-
-## Refactoring
-- Do not hesitate to perform aggressive refactors if they improve LLM readability.
-- Maintain backward compatibility ONLY if explicitly stated; otherwise, bold changes are authorized.
+## Commit Guidelines
+- Commit code frequently as chunks are completed.
+- Ensure functional, logical groups of changes per commit.
+- Radical, bold changes ("YOLO" mode) are permitted and encouraged to achieve goals.
+- Backward compatibility is strictly not required.

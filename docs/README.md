@@ -1,16 +1,10 @@
 # longermini Documentation
 
-This is the canonical index for the `longermini` documentation.
-The project is completely designed for LLM parsing and execution. 
+This is the root index for the `longermini` documentation tree. It is designed to be easily readable by LLMs.
 
-## Documentation Rules
-- Each directory contains exactly one `README.md` that acts strictly as a Table of Contents.
-- No Markdown file exceeds 300 lines.
-- No Source file exceeds 200 lines.
-- Use simple, declarative bullet points.
+## Subdirectories
 
-## Directories
-- [Architecture](architecture/README.md): Stack details and structural decisions.
-- [Product](product/README.md): Product features, rules, and placeholders.
-- [Operations](operations/README.md): Deployment and running instructions.
-- [Development](development/README.md): Repository guidelines and commit rules.
+- [architecture](architecture/README.md): Architecture and stack decisions.
+- [product](product/README.md): Product features and UI details.
+- [operations](operations/README.md): Deployment, environment variables, and Docker.
+- [development](development/README.md): Development guidelines and constraints.

@@ -2,5 +2,6 @@
 
 Table of Contents for Development documentation.
 
-## Children
-- [rules.md](rules.md): Repository file constraints and coding style.
+## Documents
+
+- [rules.md](rules.md): Repository rules, constraints, and coding standards.

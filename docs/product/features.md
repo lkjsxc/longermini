@@ -1,23 +1,22 @@
-# Features
+# Product Features
 
-## Main UI
-- A large text area for user input.
-- A "longermini!" submit button.
-- A "Post to X" share button that appears after successful text processing.
-
-## Placeholders
-- The textarea randomly cycles through funny, informal placeholder sentences.
-- Placeholder state is defined in `public/examples.json`.
-- Changes occur every 3 seconds while the textarea is empty.
-
-## Dark/Light Mode
-- A manual toggle switch resides in the Header.
-- The toggle adds or removes the `.dark` class on the `<html>` root element.
-- The system defaults to Dark Mode initially or respects user OS preference if possible, but the manual toggle supersedes it via the `.dark` class custom variant in Tailwind v4.
+## UI Structure
+- A central text area for user input.
+- A "longermini!" button to process text via the Gemini AI API.
+- A "Post to X" button that appears post-generation, appending `#longermini` to the tweet.
+- A "getseed" feature to request a short, random sentence from AI in various languages.
 
 ## Character Limits
-- User input is limited to 140 characters.
+- The initial input limit is strictly 120 characters.
+- Once the text is successfully expanded via the "longermini!" button, this limit is lifted.
+- Users can then freely edit their expanded text without hitting the 120-character restriction.
+- If the user deletes all text (clearing the box entirely), the 120-character limit is re-enforced.
 
-## History
-- Processed generations are saved to `localStorage`.
-- History can be cleared manually by the user.
+## Placeholders
+- The empty state displays casual, funny, and mundane phrases in multiple languages.
+- These placeholders rotate automatically every 3 seconds.
+- The placeholder list is loaded from `public/examples.json`.
+
+## getseed Feature
+- Allows users to select a language (English, Japanese, Spanish, French, German).
+- Requests a short, casual sentence from the Gemini API to serve as a seed for the longermini expansion.

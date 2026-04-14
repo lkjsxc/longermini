@@ -2,5 +2,6 @@
 
 Table of Contents for Product documentation.
 
-## Children
-- [features.md](features.md): Details of the UI features, interactions, and examples.
+## Documents
+
+- [features.md](features.md): Details of the UI features, placeholders, and AI interactions.

@@ -2,5 +2,6 @@
 
 Table of Contents for Operations documentation.
 
-## Children
-- [deployment.md](deployment.md): Instructions for building and running the project.
+## Documents
+
+- [deployment.md](deployment.md): Instructions for configuring and running the application.

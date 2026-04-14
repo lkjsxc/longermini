@@ -1,11 +1,14 @@
-# Deployment
+# Deployment and Operations
 
 ## Local Development
-- Use `docker compose up --build` for the definitive local environment.
-- This ensures consistency and prevents "it works on my machine" issues.
-- Exposes standard Next.js ports.
+- Use Docker Compose for a consistent, isolated local environment.
+- Command: `docker compose up --build`.
+
+## Environment Variables
+- Copy `.env.example` to `.env`.
+- `GEMINI_API_KEY`: The API key from Google AI Studio needed for the `/api/rewrite` and `/api/seed` endpoints.
 
 ## Production
-- Built and deployed onto Cloudflare Pages using OpenNext.
-- The build command is `npm run build` which invokes OpenNext builder.
-- Ensure correct environment variables (`GEMINI_API_KEY`) are set in Cloudflare's dashboard.
+- Built and deployed on Cloudflare Pages using OpenNext.
+- Build command: `npm run build` (invokes OpenNext builder).
+- Ensure `GEMINI_API_KEY` is properly configured in the Cloudflare Dashboard environment variables.
